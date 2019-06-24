@@ -1,4 +1,4 @@
-class Newssource:
+class Source:
   """
   class to define news objects
   """
@@ -8,7 +8,7 @@ class Newssource:
     self.description = description
     self.url = url
     
-class article:
+class Article:
   '''
   class to define Articles Objects
   '''
