@@ -72,3 +72,4 @@ def process_article_results(article_results_list):
     urlToImage = article.get('urlToImage')
     publishedAt = article.get('publishedAt')
     content = article.get('content')
+  return article_results
