@@ -20,4 +20,31 @@
           </div>
       </div>
 
+      <div class="container col-md-7" style="background-color: #fff;
+      border: 1px solid #e8e8e9;float: right">
+              <div>
+                  <h2 class="text-center" style="size:21px;color: rgb(12, 12, 10)"> TOP AND TRENDING </h2>
+                  <hr> {% for chelo in Article %} {% if chelo.urlToImage%}
+                  <div class="card">
+                      <div class="card-body">
+                          <h2 style="size:21px" class="card-title text-warning">{{ chelo.title }}</h2>
+                          <hr>
+                          <p class="card-text text-body">{{ chelo.description }}</p>
+  
+  
+                          <img src="{{ chelo.urlToImage }}" class="card-img-top img-responsive" alt="...">
+                          <p class="card-text" style='text-align: right; padding-top: 1%;' class="text-muted">Article by {{ chelo.author }} on {{ chelo.publishedAt}}</p>
+                          <div class="text-center mt-3">
+                              <button type="button" class="btn btn-outline-success"><a class="text-warning" style="text-decoration: none;" href="{{ chelo.url }}">READ MORE</a></button></div>
+  
+                      </div>
+                      <br>
+                      <hr>
+                  </div>
+                  {% endif %} {% endfor %}
+              </div>
+          </div>
+      </div>
+  </div>
+
 {% endblock %}

@@ -67,6 +67,7 @@ def get_article():
 
 def process_article_results(article_results_list):
   article_results = []
+  
   for article in article_results_list:
     author = article.get('author')
     title = article.get('title')
@@ -75,4 +76,8 @@ def process_article_results(article_results_list):
     urlToImage = article.get('urlToImage')
     publishedAt = article.get('publishedAt')
     content = article.get('content')
+    
+    article_object = Article(author, title, description, url, urlToImage, publishedAt, content)
+    article_results.append(article_object)
+    
   return article_results
