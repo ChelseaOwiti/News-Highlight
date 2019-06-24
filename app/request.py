@@ -22,7 +22,7 @@ def get_sources():
   """
   gets the json response to our url request
   """
-  get_sources_url = base_url.format(api_key)
+  get_sources_url = base_url.format('0918c87ec2ab491db72f7f3d897c180b')
   
   with urllib.request.urlopen(get_sources_url) as url:
     get_sources_data = url.read()
@@ -45,14 +45,14 @@ def process_results(sources_list):
     description = source_item.get('description')
     url = source_item.get('url')
     
-    source_object = Newssource(id, name, description, url)
+    source_object = Source(id, name, description, url)
     sources_results.append(source_object)
   return sources_results
 def get_article():
   """
   get json response to our url request
   """
-  get_article_url = article_url.format(api_key)
+  get_article_url = article_url.format('0918c87ec2ab491db72f7f3d897c180b')
   
   with urllib.request.urlopen(get_article_url) as url:
     get_article_data = url.read()
