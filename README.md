@@ -35,7 +35,3 @@ No Bugs
 ### License and Copyright details
 * [MIT LICENSE](LICENSE)
 Copyright (c) 2019 **Chelsea Owiti**
-
-
-
-
