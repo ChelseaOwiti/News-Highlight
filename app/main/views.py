@@ -1,8 +1,8 @@
 from flask import render_template
-from app import app
+from . import main
 from ..request import get_sources, get_article
 
-@app.route('/')
+@main.route('/')
 #define view function
 def index():
   """
