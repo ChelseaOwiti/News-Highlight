@@ -1,11 +1,23 @@
 {% extends 'base.html' %}
 
 {% block content%}
-<h1>Sources</h1>
-<ul>
-  {% for source in sources %}
-  <p><a href="{{ sources.url }}">{{ sources.url }}</a></p> 
-  {% endfor %}
-</ul>
+<div class="container">
+  <div class="row">
+      <div class="container col-md-4 ">
+          <div class="sidebar-sticky">
+              <nav class="d-none d-md-block bg-light sidebar">
+                  <div class="card container-fluid" style="width: 40rem;">
+                      <div class="card-header">
+                          <h2 class="text-muted" style="color: rgb(22, 21, 18)"> NEWS SOURCES A-Z</h2>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                          {% for source in sources %}
+                          <li class="list-group-item "><a class="text-warning" style="text-decoration: none;" href="/source/{{source.id}}">{{ source.name.upper() }}</a></li>
+                          {% endfor %}
+                      </ul>
+                  </div>
+              </nav>
+          </div>
+      </div>
 
 {% endblock %}
