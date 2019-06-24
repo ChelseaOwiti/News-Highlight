@@ -1,3 +1,5 @@
+import os
+
 class Config:
   """
   General config parent class
